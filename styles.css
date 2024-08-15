@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.word-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 30px);
+    grid-template-rows: repeat(8, 30px);
+    gap: 1px;
+}
+
+.grid span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: "AGRINHO.jpeg";
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grid span.selected {
+    background-color: #d3d3d3;
+}
+
+.grid span.correct {
+    background-color: #90ee90; /* Cor verde claro para palavras encontradas */
+}
+
+.word-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.word-list h2 {
+    margin: 0 0 10px;
+}
+
+.word-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.word-list li {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.word-list li.found {
+    text-decoration: line-through; /* Risco para palavras encontradas */
+    color: #888; /* Cor cinza para palavras riscadas */
+}
